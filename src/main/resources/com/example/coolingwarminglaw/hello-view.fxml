@@ -5,12 +5,49 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.coolingwarminglaw.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:id="bp_base" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.coolingwarminglaw.HelloController">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+
+    <top>
+        <VBox spacing="15" alignment="TOP_CENTER" >
+            <Label text="Ley de enfriamiento de Newton" style="-fx-font-size: 50; -fx-text-fill: blue; -fx-font-family: 'Arial Black'"/>
+
+            <GridPane alignment="CENTER" prefHeight="50" prefWidth="50">
+
+                <Label text="Temperatura Ambiente: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txt_tempAmbiente" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Temperatura actual: " GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <TextField fx:id="txt_tempActual" promptText="f(0)=?" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <Label text="Tiempo T: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txt_x" promptText="f(?)" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="temperatura T: " GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <TextField fx:id="txt_fx" promptText="f(T)" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+            </GridPane>
+
+                <Button text="Start" onAction="#m_calcular"/>
+
+
+        </VBox>
+    </top>
+
+
+
+
+
+
+
+
+
+
+</BorderPane>
