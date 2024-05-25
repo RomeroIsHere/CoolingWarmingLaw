@@ -5,6 +5,7 @@ import com.example.coolingwarminglaw.Models.LeyEnfriamiento;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
@@ -13,7 +14,7 @@ import javafx.scene.layout.GridPane;
 public class HelloController {
 
     @FXML
-    private TextField txt_tempAmbiente,txt_tempActual,txt_x,txt_fx;
+    private Spinner<Double> txt_tempAmbiente,txt_tempActual,txt_x,txt_fx;
 
    private LeyEnfriamiento a_ley=new LeyEnfriamiento();
 
@@ -27,13 +28,13 @@ public class HelloController {
         String v_formula;
         //   try{
             v_formula=a_ley.getA_formula(
-                    Float.parseFloat(txt_tempAmbiente.getText().toString()),
-                    Float.parseFloat(txt_tempActual.getText().toString()),
-                    Float.parseFloat(txt_x.getText().toString()),
-                    Float.parseFloat(txt_fx.getText().toString())
+                    txt_tempAmbiente.getValue().floatValue(),
+                    txt_tempActual.getValue().floatValue(),
+                    txt_x.getValue().floatValue(),
+                    txt_fx.getValue().floatValue()
             );
 
-            bp_base.setCenter(a_generator.m_geneGraph(v_formula,Float.parseFloat(txt_tempAmbiente.getText())));
+            bp_base.setCenter(a_generator.m_geneGraph(v_formula,txt_tempAmbiente.getValue().floatValue()));
 
        /* }catch (Exception e){
             System.out.println(e.toString());
