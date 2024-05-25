@@ -41,15 +41,16 @@ public class Graphic {
 
 
     private List<Float> m_getValues(String p_formula,float p_final){
-      List<Float> v_respuesta=new ArrayList();
+      List<Float> v_respuesta=new ArrayList<>();
       int v_contador;
       v_contador=0;
       Funtion v_funtion=new Funtion();
        v_funtion.m_cargFuncion(p_formula);
         System.out.println(p_formula);
+        int limit=3000;
         do{
             v_respuesta.add(Float.parseFloat(v_funtion.m_evaluar(v_contador++)));
-        }while (v_respuesta.get(v_respuesta.size()-1)>p_final);
+        }while (v_respuesta.getLast()>p_final&&v_contador<limit);
 
         return v_respuesta;
     }

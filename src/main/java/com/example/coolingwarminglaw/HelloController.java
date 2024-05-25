@@ -25,8 +25,7 @@ public class HelloController {
     @FXML
     private void m_calcular(){
         String v_formula;
-        v_formula="";
-     //   try{
+        //   try{
             v_formula=a_ley.getA_formula(
                     Float.parseFloat(txt_tempAmbiente.getText().toString()),
                     Float.parseFloat(txt_tempActual.getText().toString()),
