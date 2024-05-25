@@ -24,28 +24,28 @@
                    <Label text="Temperatura Ambiente: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
                <Spinner fx:id="txt_tempAmbiente" editable="true" GridPane.columnIndex="1" >
                    <valueFactory>
-                       <SpinnerValueFactory.DoubleSpinnerValueFactory min="0.0" max="10.0" initialValue="5.0" amountToStepBy="0.1"/>
+                       <SpinnerValueFactory.DoubleSpinnerValueFactory min="-273.15" max="1000.0" initialValue="5.0" amountToStepBy="0.1"/>
                    </valueFactory>
                </Spinner>
    
                    <Label text="Temperatura actual: " GridPane.columnIndex="2" GridPane.rowIndex="0" />
                    <Spinner fx:id="txt_tempActual" editable="true" promptText="f(0)=?" GridPane.columnIndex="3" GridPane.rowIndex="0" >
                        <valueFactory>
-                           <SpinnerValueFactory.DoubleSpinnerValueFactory min="0.0" max="10.0" initialValue="5.0" amountToStepBy="0.1"/>
+                           <SpinnerValueFactory.DoubleSpinnerValueFactory min="-273.15" max="1000.0" initialValue="5.0" amountToStepBy="0.1"/>
                        </valueFactory>
                    </Spinner>
    
                    <Label text="Tiempo T: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
                    <Spinner fx:id="txt_x" editable="true" promptText="f(?)" GridPane.columnIndex="1" GridPane.rowIndex="1" >
                        <valueFactory>
-                           <SpinnerValueFactory.DoubleSpinnerValueFactory min="0.0" max="10.0" initialValue="5.0" amountToStepBy="0.1"/>
+                           <SpinnerValueFactory.DoubleSpinnerValueFactory min="0" max="1000.0" initialValue="5.0" amountToStepBy="0.1"/>
                        </valueFactory>
                    </Spinner>
    
                    <Label text="temperatura T: " GridPane.columnIndex="2" GridPane.rowIndex="1" />
                    <Spinner fx:id="txt_fx" editable="true" promptText="f(T)" GridPane.columnIndex="3" GridPane.rowIndex="1" >
                        <valueFactory>
-                           <SpinnerValueFactory.DoubleSpinnerValueFactory min="0.0" max="10.0" initialValue="5.0" amountToStepBy="0.1"/>
+                           <SpinnerValueFactory.DoubleSpinnerValueFactory min="-273.15" max="1000.0" initialValue="5.0" amountToStepBy="0.1"/>
                        </valueFactory>
                    </Spinner>
                <columnConstraints>
