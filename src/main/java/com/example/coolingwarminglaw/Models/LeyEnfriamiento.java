@@ -21,9 +21,9 @@ public class LeyEnfriamiento {
     }
 
 
-    private String m_getC(float p_tempFinal,float p_tempAmbiente){
+    private String m_getC(float p_tempInicial,float p_tempAmbiente){
         float v_respuesta;
-        v_respuesta=p_tempFinal-p_tempAmbiente;
+        v_respuesta=p_tempInicial-p_tempAmbiente;
 
         return a_format.format(v_respuesta);
     }

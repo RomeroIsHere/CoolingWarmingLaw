@@ -22,7 +22,7 @@ public class Graphic {
         lineChart.setTitle("Enfriamiento de la sustancia");
         //defining a series
         XYChart.Series series = new XYChart.Series();
-        series.setName("p_formula");
+        series.setName(p_formula);
         //populating the series with data
 
         xAxis.setLabel("Tiempo (s)");
